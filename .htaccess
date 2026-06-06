@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteRule ^(?:app|vendor|storage|tests|docs)(?:/|$) - [F,L]
+    RewriteRule ^(?:composer\.(?:json|lock)|\.env(?:\..*)?|phpstan\.neon|phpunit\.xml)$ - [F,L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ index.php [L]
+</IfModule>
