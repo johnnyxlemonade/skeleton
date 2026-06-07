@@ -2,6 +2,9 @@
 
 declare(strict_types=1);
 
+use App\Queue\DemoMessage;
+use App\Queue\DemoMessageHandler;
+
 return [
     // sync | database
     'default' => 'sync',
@@ -11,6 +14,6 @@ return [
         'failed_table' => 'system_queue_failed_job',
     ],
     'handlers' => [
-        // MessageClass::class => HandlerClass::class,
+        DemoMessage::class => DemoMessageHandler::class,
     ],
 ];

@@ -49,6 +49,11 @@ final class HomeController extends AppController
                     'description' => 'JSON response created through AbstractController.',
                     'route' => 'examples.helper.status',
                 ],
+                [
+                    'title' => 'Events + Queue',
+                    'description' => 'Dispatch synchronous events and queue messages using framework services.',
+                    'route' => 'examples.async',
+                ],
             ],
         ]);
     }

@@ -44,6 +44,10 @@ final class MainNavigation
                 'label' => 'Error pages',
                 'route' => 'examples.errors.not-found',
             ],
+            [
+                'label' => 'Events + Queue',
+                'route' => 'examples.async',
+            ],
         ];
     }
 }

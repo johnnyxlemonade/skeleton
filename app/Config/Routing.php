@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use App\Controllers\AsyncExampleController;
 use App\Controllers\ContactExampleController;
 use App\Controllers\ErrorExampleController;
 use App\Controllers\HelperController;
@@ -26,4 +27,7 @@ return static function (Router $router): void {
 
     $router->getNamed('examples.helper', '/examples/helper', HelperController::class . '@index');
     $router->getNamed('examples.helper.status', '/examples/helper/status', HelperController::class . '@status');
+
+    $router->getNamed('examples.async', '/examples/async', AsyncExampleController::class . '@index');
+    $router->postNamed('examples.async.database', '/examples/async/database', AsyncExampleController::class . '@database');
 };
