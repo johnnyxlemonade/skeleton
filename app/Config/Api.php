@@ -2,25 +2,21 @@
 
 declare(strict_types=1);
 
-return [
-    'enabled' => true,
-    'prefix' => '/api',
+use Lemonade\Framework\Api\Config\ApiConfigDefinition;
 
-    'security' => [
-        'static_bearer' => [
-            'enabled' => true,
-            'token' => env('API_TOKEN'),
-            'scopes' => [
-                'api:admin',
-                'openapi:read',
-            ],
-        ],
-    ],
-
-    'framework' => [
-        'docs' => [
-            'enabled' => true,
-        ],
-    ],
-];
-
+return ApiConfigDefinition::create()
+    ->enabled()
+    ->prefix('/api')
+    ->staticBearer(env('API_TOKEN'), ['api:admin', 'openapi:read'])
+    ->frameworkEnabled()
+    ->healthEnabled()
+    ->healthRoute('/framework/health')
+    ->healthAccess('public')
+    ->openApiEnabled()
+    ->openApiRoute('/framework/openapi.json')
+    ->openApiAccess('protected')
+    ->openApiScopes(['openapi:read'])
+    ->docsEnabled()
+    ->docsRoute('/framework/docs')
+    ->docsAccess('protected')
+    ->docsScopes(['openapi:read']);

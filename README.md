@@ -1,6 +1,6 @@
 # Lemonade Skeleton
 
-Small runnable application skeleton for Lemonade Framework. It demonstrates routing, plain PHP views, Bootstrap layout, controller styles, request input, validation, uploads, custom error pages, CLI commands, discovery config, config mapping, and framework API configuration.
+Small runnable application skeleton for Lemonade Framework. It demonstrates routing, plain PHP views, Bootstrap layout, controller styles, request input, validation, uploads, custom error pages, CLI commands, typed config definitions, and framework API configuration.
 
 ## What This Skeleton Shows
 
@@ -36,6 +36,8 @@ GET  /examples/errors/not-found     Custom 404 page demo
 GET  /examples/errors/server-error  Custom 500 page demo
 GET  /examples/helper               AbstractController HTML helper
 GET  /examples/helper/status        AbstractController JSON helper
+GET  /examples/async                Event + queue example
+POST /examples/async/database       Enqueue message to database transport
 ```
 
 A real 404 can be checked with any missing URL, for example:
@@ -142,8 +144,8 @@ app/Views/pages/examples/upload.php
 Configured profiles:
 
 ```text
-upload.profiles.example_image
-upload.profiles.example_file
+upload.images.example_image
+upload.files.example_file
 ```
 
 Image profile:
@@ -165,7 +167,7 @@ Allowed MIME types  application/pdf, application/msword,
                     application/vnd.openxmlformats-officedocument.wordprocessingml.document,
                     text/plain
 Max size            UPLOAD_FILE_MAX_BYTES, default 1 MB
-Target directory    configured through current Upload.php target_directory entry
+Target directory    UPLOAD_FILE_TARGET_DIRECTORY, default uploads/examples/files
 ```
 
 Both flows validate through framework upload services. After a successful upload, the stored file is deleted immediately. The view shows validation metadata only and does not expose a public file URL.
@@ -201,7 +203,7 @@ Discovery config lives in:
 app/Config/Discovery.php
 ```
 
-Current skeleton discovery settings:
+Current skeleton discovery settings come from `DiscoveryConfigDefinition`:
 
 ```text
 robots.enabled       DISCOVERY_ROBOTS_ENABLED, default true
@@ -246,6 +248,13 @@ Framework discovery also registers:
 vendor\bin\lemonade discovery:sitemap:generate
 ```
 
+Queue worker expects an async transport. In this skeleton the default queue transport stays `sync`, so use the database worker explicitly:
+
+```bash
+vendor\bin\lemonade queue:install
+vendor\bin\lemonade queue:work default database
+```
+
 Application commands are registered through:
 
 ```text
@@ -255,6 +264,13 @@ app/Console/Cron/HeartbeatCronCommand.php
 ```
 
 `cron:heartbeat` demonstrates a file-lock based CLI command and writes a heartbeat log entry.
+
+The async example page dispatches one message through the default `sync` transport and one explicit database transport through:
+
+```text
+GET  /examples/async
+POST /examples/async/database
+```
 
 ## Framework API
 
@@ -276,6 +292,7 @@ Framework API routes are available under the configured prefix, for example:
 ```text
 GET /api/framework/health
 GET /api/framework/openapi.json
+GET /api/framework/docs
 ```
 
 The config enables static bearer authentication support through `API_TOKEN` and scopes:
@@ -285,39 +302,60 @@ api:admin
 openapi:read
 ```
 
-Change the API behavior in `app/Config/Api.php` and `.env` as needed for a real application.
+Current access behavior in this skeleton:
+
+```text
+/api/framework/health        public
+/api/framework/openapi.json  protected bearer token
+/api/framework/docs          protected bearer token
+```
+
+Change the API behavior in `app/Config/Api.php` and `.env` as needed for a real application. The file returns `ApiConfigDefinition`, not a raw array.
 
 ## Configuration Manifest
 
-`app/Config/Config.php` is the config manifest. It maps application config files to framework config root keys.
+`app/Config/Config.php` is the config manifest. It contains plain file lists for `shared`, `http`, and `cli`.
 
-Current shared mappings include:
-
-```text
-App.php          root config
-Localization.php localization
-Cache.php        cache
-Logging.php      root-level app/error/request/benchmark logging config
-Session.php      session
-Database.php     database
-Breadcrumbs.php  breadcrumbs
-Pagination.php   pagination
-Events.php       events
-Queue.php        queue
-Upload.php       upload
-Api.php          api
-Cors.php         cors
-Discovery.php    discovery
-Providers.php    providers
-```
-
-CLI-only mapping:
+Current shared config files include:
 
 ```text
-Commands.php     commands
+App.php
+Container.php
+Providers.php
+Localization.php
+Cache.php
+Logging.php
+Session.php
+Database.php
+Breadcrumbs.php
+Pagination.php
+Events.php
+Queue.php
+Upload.php
+Api.php
+Discovery.php
+HttpClient.php
+View.php
+Components.php
+Meta.php
+Benchmark.php
 ```
 
-The manifest keeps the skeleton explicit: config files are small, named by feature, and only mapped where the framework expects them.
+HTTP-only config files:
+
+```text
+Cors.php
+HtmlMinify.php
+Error.php
+```
+
+CLI-only config files:
+
+```text
+Commands.php
+```
+
+Each config file returns a typed framework definition object such as `AppConfigDefinition`, `ProvidersConfigDefinition`, or `ApiConfigDefinition`.
 
 ## Useful Commands
 

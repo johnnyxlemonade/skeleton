@@ -3,50 +3,44 @@
 declare(strict_types=1);
 
 use Lemonade\Framework\Support\Env;
+use Lemonade\Framework\Upload\Config\UploadConfigDefinition;
 
-return [
-    'profiles' => [
-        'example_image' => [
-            'target_directory' => Env::string(
-                'UPLOAD_IMAGE_TARGET_DIRECTORY',
-                'uploads/examples/files'
-            ),
-            'max_bytes' => Env::int('UPLOAD_IMAGE_MAX_BYTES', 1048576),
-            'allowed_mime_types' => [
-                'image/jpeg',
-                'image/png',
-                'image/webp',
-            ],
-            'allowed_extensions' => [
-                'jpg',
-                'jpeg',
-                'png',
-                'webp',
-            ],
-            'min_width' => 128,
-            'min_height' => 128,
-            'max_width' => 2048,
-            'max_height' => 2048,
-            'reencode' => false,
+return UploadConfigDefinition::create()
+    ->imageProfile(
+        profile: 'example_image',
+        targetDirectory: Env::string('UPLOAD_IMAGE_TARGET_DIRECTORY', 'storage/uploads/examples/files'),
+        maxBytes: Env::int('UPLOAD_IMAGE_MAX_BYTES', 1048576),
+        allowedMimeTypes: [
+            'image/jpeg',
+            'image/png',
+            'image/webp',
         ],
-        'example_file' => [
-            'target_directory' => Env::string(
-                'UPLOAD_FILE_MAX_BYTES',
-                'uploads/examples/files'
-            ),
-            'max_bytes' => Env::int('UPLOAD_FILE_MAX_BYTES', 1048576),
-            'allowed_mime_types' => [
-                'application/pdf',
-                'application/msword',
-                'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-                'text/plain',
-            ],
-            'allowed_extensions' => [
-                'pdf',
-                'doc',
-                'docx',
-                'txt',
-            ],
+        allowedExtensions: [
+            'jpg',
+            'jpeg',
+            'png',
+            'webp',
         ],
-    ],
-];
+        reencode: false,
+        minWidth: 128,
+        maxWidth: 2048,
+        minHeight: 128,
+        maxHeight: 2048,
+    )
+    ->fileProfile(
+        profile: 'example_file',
+        targetDirectory: Env::string('UPLOAD_FILE_TARGET_DIRECTORYX', 'storage/uploads/examples/files'),
+        maxBytes: Env::int('UPLOAD_FILE_MAX_BYTES', 1048576),
+        allowedMimeTypes: [
+            'application/pdf',
+            'application/msword',
+            'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+            'text/plain',
+        ],
+        allowedExtensions: [
+            'pdf',
+            'doc',
+            'docx',
+            'txt',
+        ],
+    );

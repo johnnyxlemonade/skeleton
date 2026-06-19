@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7322e390-0a2e-4c37-befe-e704e0a8380c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Config/Api.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Config/Api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Config/App.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Config/App.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Config/Breadcrumbs.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Config/Breadcrumbs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Config/Cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Config/Cache.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Config/Commands.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Config/Commands.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Config/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Config/Config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Config/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Config/Database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Config/Discovery.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Config/Discovery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Config/Events.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Config/Events.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Config/Localization.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Config/Localization.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Config/Logging.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Config/Logging.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Config/Pagination.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Config/Pagination.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Config/Providers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Config/Providers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Config/Queue.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Config/Queue.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Config/Session.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Config/Session.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Config/Upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Config/Upload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Upload/UploadExampleOptionsFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Upload/UploadExampleOptionsFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/logs/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/sessions/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/skeleton.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/storage/skeleton.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/uploads/.gitkeep" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable path="composer" />
+    </execution>
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="72" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="PHP File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;johnnyxlemonade&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/johnnyxlemonade/skeleton.git&quot;,
+    &quot;accountId&quot;: &quot;8aa3df23-2448-4a18-9432-29bd5be64b10&quot;
+  }
+}</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0032847516220849" />
+      <entry key="MS500" value="1.3186401674692743" />
+      <entry key="S2" value="1.7615440095466628" />
+      <entry key="S5" value="2.0728960180842604" />
+      <entry key="S10" value="2.4951562270513854" />
+      <entry key="S30" value="3.418570249420552" />
+      <entry key="S60" value="4.522127551479368" />
+      <entry key="M2" value="11.747740981568132" />
+      <entry key="M5" value="49.29703001660096" />
+      <entry key="M10" value="119.83133378252968" />
+      <entry key="M15" value="193.508383832812" />
+      <entry key="M30" value="365.1415532705544" />
+      <entry key="H1" value="536.5637562093672" />
+      <entry key="H2" value="662.2903076774495" />
+      <entry key="H4" value="739.3019129221065" />
+      <entry key="D1" value="812.3191252144496" />
+      <entry key="W1" value="825.7366425211602" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="3.491065758477958E-248" />
+      <entry key="S5" value="1.040358959751608E-99" />
+      <entry key="S10" value="3.2254595947734306E-50" />
+      <entry key="S30" value="3.183199578442195E-17" />
+      <entry key="S60" value="5.641985092538071E-9" />
+      <entry key="M2" value="7.511314859954979E-5" />
+      <entry key="M5" value="0.0224019810409772" />
+      <entry key="M10" value="0.14973907125106364" />
+      <entry key="M15" value="0.28417323948881673" />
+      <entry key="M30" value="0.612015546966716" />
+      <entry key="H1" value="1.2196436410059779" />
+      <entry key="H2" value="2.0659548313937295" />
+      <entry key="H4" value="2.830501010393049" />
+      <entry key="D1" value="3.7684963648285614" />
+      <entry key="W1" value="3.9658950655521426" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.9330490089422582" />
+      <entry key="MS500" value="1.0961126601148712" />
+      <entry key="S2" value="1.5824762355259596" />
+      <entry key="S5" value="1.9811863056779138" />
+      <entry key="S10" value="2.445098407704128" />
+      <entry key="S30" value="3.40070773526526" />
+      <entry key="S60" value="4.512966063390256" />
+      <entry key="M2" value="11.742930159213758" />
+      <entry key="M5" value="49.31659558376473" />
+      <entry key="M10" value="119.97862824217923" />
+      <entry key="M15" value="193.79027654717802" />
+      <entry key="M30" value="365.75152655259717" />
+      <entry key="H1" value="537.7814584447242" />
+      <entry key="H2" value="664.3546602526427" />
+      <entry key="H4" value="742.1313337433318" />
+      <entry key="D1" value="816.0873854489436" />
+      <entry key="W1" value="829.7025021826876" />
+    </decayedShown>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.1">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-server-handler" />
+      <path value="$PROJECT_DIR$/vendor/johnnyxlemonade/framework" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-server-middleware" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/nyholm/psr7" />
+      <path value="$PROJECT_DIR$/vendor/nyholm/psr7-server" />
+    </include_path>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3Ej8MAOF7M6QQa9RsGbBCSRh9a0" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/laragon/www/skeleton&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\skeleton" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-PS-261.25134.104" />
+        <option value="bundled-php-predefined-a98d8de5180a-6bbb74dbab74-com.jetbrains.php.sharedIndexes-PS-261.25134.104" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7322e390-0a2e-4c37-befe-e704e0a8380c" name="Changes" comment="" />
+      <created>1780680567735</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1780680567735</updated>
+      <workItem from="1780680568860" duration="1737000" />
+      <workItem from="1780730294510" duration="7000" />
+      <workItem from="1780730422788" duration="286000" />
+      <workItem from="1780732445585" duration="992000" />
+      <workItem from="1780769688613" duration="7564000" />
+      <workItem from="1780822494290" duration="1451000" />
+      <workItem from="1781880037837" duration="1511000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
