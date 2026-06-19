@@ -1,8 +1,34 @@
+# Composer
 /vendor/
-/.env
 
-/storage/**
-!/storage/
-!/storage/**/
+# Storage
+/storage/*
+!/storage/.gitkeep
 !/storage/skeleton.sqlite
-!/storage/**/.gitkeep
+
+# PHPUnit
+/build/phpunit/
+
+# Coverage
+/build/coverage/
+
+# PHPStan
+/build/phpstan/
+
+# PHP CS Fixer
+/build/php-cs-fixer/
+
+# IDE / editor
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp

@@ -8,7 +8,7 @@ use Lemonade\Framework\Upload\Config\UploadConfigDefinition;
 return UploadConfigDefinition::create()
     ->imageProfile(
         profile: 'example_image',
-        targetDirectory: Env::string('UPLOAD_IMAGE_TARGET_DIRECTORY', 'storage/uploads/examples/files'),
+        targetDirectory: Env::string('UPLOAD_IMAGE_TARGET_DIRECTORY', 'storage/uploads/examples/images'),
         maxBytes: Env::int('UPLOAD_IMAGE_MAX_BYTES', 1048576),
         allowedMimeTypes: [
             'image/jpeg',
@@ -29,7 +29,7 @@ return UploadConfigDefinition::create()
     )
     ->fileProfile(
         profile: 'example_file',
-        targetDirectory: Env::string('UPLOAD_FILE_TARGET_DIRECTORYX', 'storage/uploads/examples/files'),
+        targetDirectory: Env::string('UPLOAD_FILE_TARGET_DIRECTORY', 'storage/uploads/examples/files'),
         maxBytes: Env::int('UPLOAD_FILE_MAX_BYTES', 1048576),
         allowedMimeTypes: [
             'application/pdf',
